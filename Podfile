@@ -1,6 +1,6 @@
-platform :ios, '6.0'
+platform :ios, '8.0'
 target 'MJPhotoBrowser' do
-pod 'SDWebImage'
+pod 'SDWebImage', '~> 4.0.0'
 pod 'SVProgressHUD'
 pod 'YLGIFImage'
 end
