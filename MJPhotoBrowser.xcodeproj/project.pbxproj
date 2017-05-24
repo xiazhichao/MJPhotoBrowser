@@ -199,6 +199,7 @@
 				TargetAttributes = {
 					7D7F32241B0F0ADE00A010CD = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 5QH699V6S4;
 					};
 				};
 			};
@@ -408,6 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 5QH699V6S4;
 				INFOPLIST_FILE = MJPhotoBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -421,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 5QH699V6S4;
 				INFOPLIST_FILE = MJPhotoBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
