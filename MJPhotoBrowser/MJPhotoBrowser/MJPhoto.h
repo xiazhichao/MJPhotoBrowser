@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) UIImage *image; // 完整的图片
-
+@property (nonatomic, strong) NSData *imageData;
 @property (nonatomic, strong) UIImageView *srcImageView; // 来源view
 @property (nonatomic, strong, readonly) UIImage *placeholder;
 @property (nonatomic, strong, readonly) UIImage *capture;

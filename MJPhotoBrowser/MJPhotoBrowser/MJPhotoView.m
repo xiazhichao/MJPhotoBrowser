@@ -106,26 +106,27 @@
         ESWeak_(_photoLoadingView);
         ESWeak_(_imageView);
         
-        [SDWebImageManager.sharedManager downloadImageWithURL:_photo.url options:SDWebImageRetryFailed| SDWebImageLowPriority| SDWebImageHandleCookies progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        [[SDWebImageDownloader sharedDownloader]downloadImageWithURL:_photo.url options:SDWebImageRetryFailed| SDWebImageLowPriority| SDWebImageHandleCookies progress:^(NSInteger receivedSize, NSInteger expectedSize) {
             ESStrong_(_photoLoadingView);
             if (receivedSize > kMinProgress) {
                 __photoLoadingView.progress = (float)receivedSize/expectedSize;
             }
-        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+        } completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
             ESStrongSelf;
             ESStrong_(_imageView);
             __imageView.image = image;
-            [_self photoDidFinishLoadWithImage:image];
+            [_self photoDidFinishLoadWithImage:image withImageData:data];
         }];
     }
 }
 
 #pragma mark 加载完毕
-- (void)photoDidFinishLoadWithImage:(UIImage *)image
+- (void)photoDidFinishLoadWithImage:(UIImage *)image withImageData:(NSData *)imageData
 {
     if (image) {
         self.scrollEnabled = YES;
         _photo.image = image;
+        _photo.imageData = imageData;
         [_photoLoadingView removeFromSuperview];
         
         if ([self.photoViewDelegate respondsToSelector:@selector(photoViewImageFinishLoad:)]) {

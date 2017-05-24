@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B5C566EA0F1E3FCB2A72B1C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF6307551182D5E93801436 /* libPods.a */; };
 		7D7F322B1B0F0ADE00A010CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F322A1B0F0ADE00A010CD /* main.m */; };
 		7D7F322E1B0F0ADE00A010CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F322D1B0F0ADE00A010CD /* AppDelegate.m */; };
 		7D7F32341B0F0ADE00A010CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7F32321B0F0ADE00A010CD /* Main.storyboard */; };
@@ -22,10 +21,11 @@
 		7D7F32621B0F0B9100A010CD /* MJPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F325B1B0F0B9100A010CD /* MJPhotoView.m */; };
 		7D7F326F1B0F0EB500A010CD /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F326E1B0F0EB500A010CD /* CollectionViewCell.m */; };
 		7D7F32741B0F0EDC00A010CD /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F32731B0F0EDC00A010CD /* CollectionViewController.m */; };
+		8899863DD7099830A3D712B7 /* libPods-MJPhotoBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E17431A9C58C936B0C46C6 /* libPods-MJPhotoBrowser.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		61BDFDC6AFDCF8274D5596C5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		1EFC82C55EDEF07059186AF6 /* Pods-MJPhotoBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJPhotoBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJPhotoBrowser/Pods-MJPhotoBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 		7D7F32251B0F0ADE00A010CD /* MJPhotoBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJPhotoBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7F32291B0F0ADE00A010CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7F322A1B0F0ADE00A010CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,8 +51,8 @@
 		7D7F326E1B0F0EB500A010CD /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		7D7F32721B0F0EDC00A010CD /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		7D7F32731B0F0EDC00A010CD /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
-		C8FF0A48B1D846F8AE8F6D19 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		FBF6307551182D5E93801436 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A6F48F2EC23CB905B5E1C6F /* Pods-MJPhotoBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJPhotoBrowser.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJPhotoBrowser/Pods-MJPhotoBrowser.release.xcconfig"; sourceTree = "<group>"; };
+		D9E17431A9C58C936B0C46C6 /* libPods-MJPhotoBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJPhotoBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,20 +60,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B5C566EA0F1E3FCB2A72B1C /* libPods.a in Frameworks */,
+				8899863DD7099830A3D712B7 /* libPods-MJPhotoBrowser.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E299AEA8448BA6C9D554584 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9E17431A9C58C936B0C46C6 /* libPods-MJPhotoBrowser.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7D7F321C1B0F0ADE00A010CD = {
 			isa = PBXGroup;
 			children = (
 				7D7F32271B0F0ADE00A010CD /* MJPhotoBrowser */,
 				7D7F32261B0F0ADE00A010CD /* Products */,
-				B961F480196F1AC2CC8A31E6 /* Pods */,
-				8F7D9B37A64BEE3EE92EF84B /* Frameworks */,
+				8401F5CDBCA70A3384D7E4D1 /* Pods */,
+				5E299AEA8448BA6C9D554584 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,19 +156,11 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		8F7D9B37A64BEE3EE92EF84B /* Frameworks */ = {
+		8401F5CDBCA70A3384D7E4D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FBF6307551182D5E93801436 /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B961F480196F1AC2CC8A31E6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				61BDFDC6AFDCF8274D5596C5 /* Pods.debug.xcconfig */,
-				C8FF0A48B1D846F8AE8F6D19 /* Pods.release.xcconfig */,
+				1EFC82C55EDEF07059186AF6 /* Pods-MJPhotoBrowser.debug.xcconfig */,
+				9A6F48F2EC23CB905B5E1C6F /* Pods-MJPhotoBrowser.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -172,11 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D7F32481B0F0ADE00A010CD /* Build configuration list for PBXNativeTarget "MJPhotoBrowser" */;
 			buildPhases = (
-				545E53229C79870D3652B9FD /* Check Pods Manifest.lock */,
+				7BEDB09496A42D02FD636997 /* [CP] Check Pods Manifest.lock */,
 				7D7F32211B0F0ADE00A010CD /* Sources */,
 				7D7F32221B0F0ADE00A010CD /* Frameworks */,
 				7D7F32231B0F0ADE00A010CD /* Resources */,
-				445A2D9607833B8C874184E0 /* Copy Pods Resources */,
+				F52F19413ED8836E2578DD53 /* [CP] Embed Pods Frameworks */,
+				E996EA29F4E36A15D8C3D133 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,34 +235,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		445A2D9607833B8C874184E0 /* Copy Pods Resources */ = {
+		7BEDB09496A42D02FD636997 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		545E53229C79870D3652B9FD /* Check Pods Manifest.lock */ = {
+		E996EA29F4E36A15D8C3D133 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJPhotoBrowser/Pods-MJPhotoBrowser-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F52F19413ED8836E2578DD53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJPhotoBrowser/Pods-MJPhotoBrowser-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -388,7 +404,7 @@
 		};
 		7D7F32491B0F0ADE00A010CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61BDFDC6AFDCF8274D5596C5 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1EFC82C55EDEF07059186AF6 /* Pods-MJPhotoBrowser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -401,7 +417,7 @@
 		};
 		7D7F324A1B0F0ADE00A010CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8FF0A48B1D846F8AE8F6D19 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 9A6F48F2EC23CB905B5E1C6F /* Pods-MJPhotoBrowser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

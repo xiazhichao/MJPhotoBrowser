@@ -31,7 +31,8 @@ static NSString * const reuseIdentifier = @"Cell";
                            @"http://e.hiphotos.baidu.com/image/pic/item/c83d70cf3bc79f3d8c709a49b8a1cd11728b2931.jpg",
                            @"http://b.hiphotos.baidu.com/image/w%3D230/sign=87da5b715143fbf2c52ca120807fca1e/77c6a7efce1b9d16bc7ce418f1deb48f8c54640b.jpg",
                            @"http://h.hiphotos.baidu.com/image/pic/item/a71ea8d3fd1f4134f08c7b07271f95cad1c85e0b.jpg",
-                           @"http://g.hiphotos.baidu.com/image/pic/item/adaf2edda3cc7cd9c3b328cd3b01213fb80e9103.jpg"];
+                           @"http://g.hiphotos.baidu.com/image/pic/item/adaf2edda3cc7cd9c3b328cd3b01213fb80e9103.jpg",
+                           @"http://ddup-app-pic.oss-cn-hangzhou.aliyuncs.com/daydayimg_android1495590886327-166856947"];
     }
     return self;
 }

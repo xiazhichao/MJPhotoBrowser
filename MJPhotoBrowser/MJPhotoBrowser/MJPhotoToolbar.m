@@ -8,7 +8,8 @@
 
 #import "MJPhotoToolbar.h"
 #import "MJPhoto.h"
-
+#import <AssetsLibrary/ALAssetsLibrary.h>
+#import <MobileCoreServices/UTCoreTypes.h>
 @interface MJPhotoToolbar()
 {
     // 显示页码
@@ -57,8 +58,14 @@
 - (void)saveImage
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //        MJPhoto *photo = _photos[_currentPhotoIndex];
+        //        UIImageWriteToSavedPhotosAlbum(photo.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
         MJPhoto *photo = _photos[_currentPhotoIndex];
-        UIImageWriteToSavedPhotosAlbum(photo.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        [library writeImageDataToSavedPhotosAlbum:photo.imageData metadata:nil completionBlock:^(NSURL *assetURL, NSError *error) {
+            NSLog(@"成功保存到相册");
+        }] ;
+        
     });
 }
 
