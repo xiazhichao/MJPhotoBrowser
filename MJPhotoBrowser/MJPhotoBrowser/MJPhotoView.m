@@ -105,27 +105,27 @@
         ESWeakSelf;
         ESWeak_(_photoLoadingView);
         ESWeak_(_imageView);
-        [SDWebImageManager.sharedManager loadImageWithURL:_photo.url options:SDWebImageRetryFailed| SDWebImageLowPriority| SDWebImageHandleCookies progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        [SDWebImageManager.sharedManager downloadImageWithURL:_photo.url options:SDWebImageRetryFailed| SDWebImageLowPriority| SDWebImageHandleCookies progress:^(NSInteger receivedSize, NSInteger expectedSize) {
             ESStrong_(_photoLoadingView);
             if (receivedSize > kMinProgress) {
                 __photoLoadingView.progress = (float)receivedSize/expectedSize;
             }
-        } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
             ESStrongSelf;
             ESStrong_(_imageView);
             __imageView.image = image;
-            [_self photoDidFinishLoadWithImage:image withImageData:data];
+            [_self photoDidFinishLoadWithImage:image];
         }];
+
     }
 }
 
 #pragma mark 加载完毕
-- (void)photoDidFinishLoadWithImage:(UIImage *)image withImageData:(NSData *)imageData
+- (void)photoDidFinishLoadWithImage:(UIImage *)image
 {
     if (image) {
         self.scrollEnabled = YES;
         _photo.image = image;
-        _photo.imageData = imageData;
         [_photoLoadingView removeFromSuperview];
         
         if ([self.photoViewDelegate respondsToSelector:@selector(photoViewImageFinishLoad:)]) {

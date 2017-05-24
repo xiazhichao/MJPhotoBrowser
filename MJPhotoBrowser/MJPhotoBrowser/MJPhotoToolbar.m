@@ -57,16 +57,19 @@
 
 - (void)saveImage
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //        MJPhoto *photo = _photos[_currentPhotoIndex];
-        //        UIImageWriteToSavedPhotosAlbum(photo.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-        MJPhoto *photo = _photos[_currentPhotoIndex];
-        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-        [library writeImageDataToSavedPhotosAlbum:photo.imageData metadata:nil completionBlock:^(NSURL *assetURL, NSError *error) {
-            NSLog(@"成功保存到相册");
-        }] ;
+    MJPhoto *photo = _photos[_currentPhotoIndex];
+    [SDWebImageDownloader.sharedDownloader downloadImageWithURL:photo.url options:SDWebImageDownloaderIgnoreCachedResponse progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
-    });
+    } completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+            [library writeImageDataToSavedPhotosAlbum:data metadata:nil completionBlock:^(NSURL *assetURL, NSError *error) {
+                NSLog(@"成功保存到相册");
+            }] ;
+        });
+
+    }];
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
